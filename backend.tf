@@ -1,9 +1,6 @@
-terraform {
-  backend "s3" {
-    bucket = "mystatebucket99"
-    key = "state"   #the folder you want to store it in your bucket
-    region = "eu-north-1"
-    dynamodb_table = "mydynamotable"
-  }
-
+backend "s3" {
+  bucket = "my-terraform-state"
+  key    = "terraform.tfstate"
+  dynamodb_table = "terraform-state-lock"
+  region = "us-east-1"
 }
