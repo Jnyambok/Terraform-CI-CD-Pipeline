@@ -13,7 +13,7 @@ variables:
 
 before_script:
   - terraform --version
-  - terraform init -backend-config="tfstate.config"
+  - terraform init -backend-config="backend.tf"
 
 stages:
   - validate
