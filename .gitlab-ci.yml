@@ -36,6 +36,7 @@ plan:
   artifacts:
     paths:
       - planfile
+  when: manual
 
 apply:
   stage: apply
